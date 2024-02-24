@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a162a178-2196-405e-a987-c9d2db6d3165" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitingore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/console/app/app.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/console/app/assets.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/console/app/home.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/console/formatter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/console/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/console/msg.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/console/sets/sets.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/console/source.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/console/template/template.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/console/websocket.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/players/000060.ldb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/players/000067.ldb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/players/000070.ldb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/players/000071.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/players/CURRENT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/players/CURRENT.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/players/LOG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/players/MANIFEST-000072" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/world/db/000064.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/world/db/CURRENT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/world/db/CURRENT.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/world/db/LOG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/world/db/MANIFEST-000065" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/world/level.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/world/levelname.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/Minecraft.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Minecraft.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://$USER_HOME$/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.21.4.windows-amd64" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2cnOmF9ZbLT7BSH6fnSTWaauBug" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "master",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/moyai/WebConsole/console",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\moyai\WebConsole\console" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\moyai\WebConsole\console\app" />
+      <recent name="C:\Users\Administrator\Desktop\moyai\WebConsole\frontend" />
+      <recent name="C:\Users\Administrator\Desktop\moyai\WebConsole\assets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="WebConsole" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="WebConsole" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-467a64f6063b-ee0e143f3e2b-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-233.11799.286" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

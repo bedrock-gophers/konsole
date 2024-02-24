@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Minecraft";
-    src: url("asset/Minecraft.ttf");
+    src: url("../assets/Minecraft.ttf");
 }
 
 body {
@@ -144,7 +144,7 @@ input:focus {
     left: -100%;
     height: 300%;
     width: 300%;
-    background: url("asset/bg.jpg");
+    background: url("../assets/bg.jpg");
     background-size: cover;
     animation: bg 15s ease-in-out infinite alternate;
 }
