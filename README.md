@@ -38,5 +38,5 @@ if err != nil {
     panic(err)
 }
 ```
-Customization
+## Customization
 Konsole allows for customization of behavior, and functionality as needed.
