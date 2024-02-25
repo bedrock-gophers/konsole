@@ -1,8 +1,8 @@
-package console
+package konsole
 
 import (
 	"fmt"
-	"github.com/bedrock-gophers/console/console/sets"
+	"github.com/bedrock-gophers/konsole/konsole/sets"
 	"github.com/df-mc/dragonfly/server/cmd"
 	"github.com/df-mc/dragonfly/server/player/chat"
 	"github.com/gorilla/mux"

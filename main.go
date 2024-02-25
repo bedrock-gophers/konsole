@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/bedrock-gophers/console/console"
-	"github.com/bedrock-gophers/console/console/app"
+	"github.com/bedrock-gophers/konsole/konsole"
+	"github.com/bedrock-gophers/konsole/konsole/app"
 	"github.com/df-mc/dragonfly/server"
 	"github.com/df-mc/dragonfly/server/cmd"
 	"github.com/df-mc/dragonfly/server/event"
@@ -19,7 +19,7 @@ func main() {
 	a := app.New("/n87asdh867adb68g63gd326g7d23g67dg23asiuhdhuiiusdhhuasdhuiauisauidgiugh2861286")
 	go a.ListenAndServe(":6969")
 
-	ws := console.NewWebSocketServer(chat.StdoutSubscriber{}, "test", testFormatter{})
+	ws := konsole.NewWebSocketServer(chat.StdoutSubscriber{}, "test", testFormatter{})
 	go ws.ListenAndServe(":8080")
 
 	log := logrus.New()
@@ -52,7 +52,7 @@ func (h testHandler) HandleChat(ctx *event.Context, message *string) {
 }
 
 type testFormatter struct {
-	console.NopFormatter
+	konsole.NopFormatter
 }
 
 func (testFormatter) FormatMessage(s string) string {

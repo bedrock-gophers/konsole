@@ -1,4 +1,4 @@
-package console
+package konsole
 
 type Formatter interface {
 	FormatMessage(string) string

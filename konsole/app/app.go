@@ -19,7 +19,6 @@ func New(endpoint string) *App {
 }
 
 func (a *App) route() {
-	a.router.HandleFunc("/assets/{filename}", a.assets)
 	a.router.HandleFunc(a.endpoint, a.home)
 }
 

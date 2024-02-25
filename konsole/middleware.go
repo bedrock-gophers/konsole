@@ -1,4 +1,4 @@
-package console
+package konsole
 
 import (
 	"net/http"

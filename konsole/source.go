@@ -1,4 +1,4 @@
-package console
+package konsole
 
 import (
 	"github.com/df-mc/dragonfly/server/cmd"
