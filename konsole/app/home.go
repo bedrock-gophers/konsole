@@ -8,7 +8,7 @@ import (
 var content []byte
 
 func init() {
-	req, err := http.NewRequest("GET", "https://raw.githubusercontent.com/roimee6/roimee6.github.io/main/index.html", nil)
+	req, err := http.NewRequest("GET", "https://raw.githubusercontent.com/roimee6/roimee6.github.io/main/konsole/index.html", nil)
 	if err != nil {
 		panic(err)
 	}
