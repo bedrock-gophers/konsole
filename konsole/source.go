@@ -13,6 +13,10 @@ type source struct {
 	conn *websocket.Conn
 }
 
+func (s source) Name() string {
+	return "CONSOLE"
+}
+
 func (s source) Position() mgl64.Vec3 {
 	return mgl64.Vec3{}
 }
