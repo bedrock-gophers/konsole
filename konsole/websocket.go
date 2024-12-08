@@ -5,6 +5,8 @@ import (
 	"github.com/bedrock-gophers/konsole/konsole/sets"
 	"github.com/df-mc/dragonfly/server/cmd"
 	"github.com/df-mc/dragonfly/server/player/chat"
+	"github.com/df-mc/dragonfly/server/world"
+	"github.com/google/uuid"
 	"github.com/gorilla/mux"
 	"github.com/gorilla/websocket"
 	"github.com/sandertv/gophertunnel/minecraft/text"
@@ -22,7 +24,8 @@ var upgrader = websocket.Upgrader{
 }
 
 type WebSocketServer struct {
-	sub chat.Subscriber
+	uuid uuid.UUID
+	sub  chat.Subscriber
 
 	connectionMu sync.Mutex
 	connections  sets.Set[*websocket.Conn]
@@ -32,12 +35,17 @@ type WebSocketServer struct {
 	router    *mux.Router
 }
 
+func (ws *WebSocketServer) UUID() uuid.UUID {
+	return ws.uuid
+}
+
 func NewWebSocketServer(sub chat.Subscriber, password string, f Formatter) *WebSocketServer {
 	if f == nil {
 		f = NopFormatter{}
 	}
 
 	ws := &WebSocketServer{
+		uuid:        uuid.New(),
 		sub:         sub,
 		connections: sets.New[*websocket.Conn](),
 		password:    password,
@@ -137,7 +145,9 @@ func (ws *WebSocketServer) handleMessage(conn *websocket.Conn, msg string) {
 			_ = conn.WriteMessage(websocket.TextMessage, []byte(text.Colourf(MessageUnknownCommand, msg)))
 			return
 		}
-		c.Execute(strings.TrimPrefix(strings.TrimPrefix(msg, strings.Split(msg, " ")[0]), " "), source{conn: conn})
+		world.Config{}.New().Exec(func(tx *world.Tx) {
+			c.Execute(strings.TrimPrefix(strings.TrimPrefix(msg, strings.Split(msg, " ")[0]), " "), source{conn: conn}, tx)
+		})
 		return
 	}
 	_, _ = chat.Global.WriteString(m)

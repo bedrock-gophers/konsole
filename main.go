@@ -6,11 +6,11 @@ import (
 	"github.com/bedrock-gophers/konsole/konsole/app"
 	"github.com/df-mc/dragonfly/server"
 	"github.com/df-mc/dragonfly/server/cmd"
-	"github.com/df-mc/dragonfly/server/event"
 	"github.com/df-mc/dragonfly/server/player"
 	"github.com/df-mc/dragonfly/server/player/chat"
+	"github.com/df-mc/dragonfly/server/world"
 	"github.com/sandertv/gophertunnel/minecraft/text"
-	"github.com/sirupsen/logrus"
+	"log/slog"
 )
 
 /*
@@ -22,33 +22,26 @@ func main() {
 	ws := konsole.NewWebSocketServer(chat.StdoutSubscriber{}, "test", testFormatter{})
 	go ws.ListenAndServe(":8080")
 
-	log := logrus.New()
-	log.Formatter = &logrus.TextFormatter{ForceColors: true}
-	log.Level = logrus.DebugLevel
-
 	chat.Global.Subscribe(ws)
-	conf, _ := server.DefaultConfig().Config(log)
+	conf, _ := server.DefaultConfig().Config(slog.Default())
 
 	srv := conf.New()
 	srv.CloseOnProgramEnd()
 	cmd.Register(cmd.New("test", "", nil, testCommand{}, testCommand2{}))
 
 	srv.Listen()
-	for srv.Accept(func(p *player.Player) {
-		p.Handle(testHandler{p: p})
-	}) {
-		// Do nothing
+	for p := range srv.Accept() {
+		p.Handle(testHandler{})
 	}
 }
 
 type testHandler struct {
 	player.NopHandler
-	p *player.Player
 }
 
-func (h testHandler) HandleChat(ctx *event.Context, message *string) {
+func (h testHandler) HandleChat(ctx *player.Context, message *string) {
 	ctx.Cancel()
-	_, _ = chat.Global.WriteString(text.Colourf("<grey>%s: %s</grey>", h.p.Name(), *message))
+	_, _ = chat.Global.WriteString(text.Colourf("<grey>%s: %s</grey>", ctx.Val().Name(), *message))
 }
 
 type testFormatter struct {
@@ -67,7 +60,7 @@ type testCommand struct {
 	Sub cmd.SubCommand `cmd:"test"`
 }
 
-func (testCommand) Run(_ cmd.Source, _ *cmd.Output) {
+func (testCommand) Run(_ cmd.Source, _ *cmd.Output, _ *world.Tx) {
 	fmt.Println("hey")
 }
 
@@ -75,6 +68,6 @@ type testCommand2 struct {
 	Sub cmd.SubCommand `cmd:"test2"`
 }
 
-func (testCommand2) Run(_ cmd.Source, _ *cmd.Output) {
+func (testCommand2) Run(_ cmd.Source, _ *cmd.Output, _ *world.Tx) {
 	fmt.Println("hey2")
 }
